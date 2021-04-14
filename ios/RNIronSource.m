@@ -34,6 +34,11 @@ RCT_EXPORT_METHOD(setConsent:(BOOL)consent)
     [IronSource setConsent:consent];
 }
 
+RCT_EXPORT_METHOD(setMetaData:(NSString *)key value:(NSString *)value)
+{
+  [IronSource setMetaDataWithKey:key value:value];
+}
+
 RCT_EXPORT_METHOD(getAdvertiserId:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject)
 {
     @try {
